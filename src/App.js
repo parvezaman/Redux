@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import Container from './pages/Container/Container';
+import Form from './pages/Form/Form.js';
 
 function App() {
   return (
     <>
-      <Container />
+      {/* <Container /> */}
+      <Form />
     </>
   );
 }
