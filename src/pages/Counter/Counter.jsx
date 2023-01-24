@@ -4,8 +4,8 @@ const initialState = { count: 0 };
 
 const reducer = (state, action) => {
     console.log(action)
-    if (action.type === 'inc') return { count: state.count++ };
-    if (action.type === 'dec') return { count: state.count-- };
+    if (action.type === 'inc') return { count: state.count + action.payload };
+    if (action.type === 'dec') return { count: state.count - action.payload };
 }
 
 const Counter = () => {
@@ -17,10 +17,10 @@ const Counter = () => {
                 {state.count}
             </div>
             <div>
-                <button onClick={() => dispatch({ type: 'inc', name: 'aman' })} style={{ fontSize: 55 }}>+</button>
+                <button onClick={() => dispatch({ type: 'inc', name: 'aman', payload: 5 })} style={{ fontSize: 55 }}>+</button>
             </div>
             <div>
-                <button onClick={() => dispatch({ type: 'dec', name: "parvez" })} style={{ fontSize: 55 }}>-</button>
+                <button onClick={() => dispatch({ type: 'dec', name: "parvez", payload: 5 })} style={{ fontSize: 55 }}>-</button>
             </div>
         </div>
     );
